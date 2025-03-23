@@ -31,14 +31,14 @@ func RequestForm() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<form hx-post=\"/generate\" hx-target=\"#image-list-container\" hx-swap=\"innerHTML\" hx-on=\"htmx:beforeRequest: this.setAttribute(&#39;data-loading&#39;, &#39;true&#39;)\n                htmx:afterRequest: this.removeAttribute(&#39;data-loading&#39;)\" class=\"fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box group\"><legend class=\"fieldset-legend\">Form</legend><label class=\"fieldset-label\">Endpoint</label> <label class=\"input validator\"><svg class=\"h-[1em] opacity-50\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2.5\" fill=\"none\" stroke=\"currentColor\"><path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\"></path><path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\"></path></g></svg> <input type=\"url\" required placeholder=\"https://\" name=\"endpoint\" value=\"")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<fieldset class=\"fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box\"><legend class=\"fieldset-legend\">RequestForm</legend><form hx-post=\"/generate\" hx-target=\"#image-list-container\" hx-swap=\"innerHTML\" hx-on=\"htmx:beforeRequest: this.setAttribute(&#39;data-loading&#39;, &#39;true&#39;)\n                htmx:afterRequest: this.removeAttribute(&#39;data-loading&#39;)\" class=\"flex flex-col gap-4 group\"><label class=\"fieldset-label\">Endpoint</label> <label class=\"input validator\"><svg class=\"h-[1em] opacity-50\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><g stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-width=\"2.5\" fill=\"none\" stroke=\"currentColor\"><path d=\"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71\"></path><path d=\"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71\"></path></g></svg> <input type=\"url\" required placeholder=\"https://\" name=\"endpoint\" value=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(genimg.OpenaiImagesApiEndpoint)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templs/components/request_form.templ`, Line: 21, Col: 116}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templs/components/request_form.templ`, Line: 22, Col: 116}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
@@ -51,7 +51,7 @@ func RequestForm() templ.Component {
 		var templ_7745c5c3_Var3 string
 		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(genimg.ImageSizeLandscape)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templs/components/request_form.templ`, Line: 39, Col: 103}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templs/components/request_form.templ`, Line: 40, Col: 103}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {
@@ -64,13 +64,13 @@ func RequestForm() templ.Component {
 		var templ_7745c5c3_Var4 string
 		templ_7745c5c3_Var4, templ_7745c5c3_Err = templ.JoinStringErrs(genimg.ImageSizeSquare)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templs/components/request_form.templ`, Line: 44, Col: 100}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templs/components/request_form.templ`, Line: 45, Col: 100}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var4))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "\"> <label for=\"square\">Square</label></div></div><label class=\"fieldset-label\">Number of Images</label> <input type=\"number\" required placeholder=\"Type a number between 1 to 10\" name=\"numImages\" value=\"1\" min=\"1\" max=\"10\" title=\"Must be between be 1 to 20\" class=\"input validator\"><button type=\"submit\" class=\"btn btn-neutral mt-4\"><span class=\"animate-spin flex size-6 group-data-[loading=true]:flex hidden\" aria-hidden=\"true\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"none\" stroke=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth=\"2\" d=\"M21 12a9 9 0 1 1-6.219-8.56\"></path></svg></span> Generate</button></form>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "\"> <label for=\"square\">Square</label></div></div><label class=\"fieldset-label\">Number of Images</label> <input type=\"number\" required placeholder=\"Type a number between 1 to 10\" name=\"numImages\" value=\"1\" min=\"1\" max=\"10\" title=\"Must be between be 1 to 20\" class=\"input validator\"><button type=\"submit\" class=\"btn btn-neutral\"><span class=\"animate-spin flex size-6 group-data-[loading=true]:flex hidden\" aria-hidden=\"true\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"none\" stroke=\"currentColor\" strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth=\"2\" d=\"M21 12a9 9 0 1 1-6.219-8.56\"></path></svg></span> Generate</button></form></fieldset>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

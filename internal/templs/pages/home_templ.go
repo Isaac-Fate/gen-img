@@ -44,7 +44,7 @@ func Home() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<header class=\"flex flex-col justify-center h-[4rem] p-8\"><p class=\"font-bold text-2xl\">🦫 gen-img</p></header><div class=\"flex flex-row h-[calc(100vh-4rem)] justify-between px-8 gap-8\"><div class=\"flex flex-row gap-2\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<main class=\"flex flex-col h-full gap-8 p-8\"><header class=\"flex flex-col justify-center text-2xl font-bold\">gen-img</header><div class=\"flex flex-row h-full justify-between gap-8\"><div class=\"flex flex-row gap-2\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -52,7 +52,7 @@ func Home() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "<div class=\"divider divider-horizontal\">👉</div></div><div id=\"image-list-container\" class=\"overflow-y-auto h-full\"></div></div>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "<div class=\"divider divider-horizontal\">👉</div></div><div id=\"image-list-container\" class=\"overflow-y-auto h-full\"></div></div></main>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

@@ -3,17 +3,18 @@ package components
 import "gen-img/pkg/genimg"
 
 templ RequestForm() {
-    <form
-        hx-post="/generate"
-        hx-target="#image-list-container"
-        hx-swap="innerHTML" 
-        hx-on="htmx:beforeRequest: this.setAttribute('data-loading', 'true')
+
+    <fieldset class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box">
+        <legend class="fieldset-legend">RequestForm</legend>
+
+        <form
+            hx-post="/generate"
+            hx-target="#image-list-container"
+            hx-swap="innerHTML" 
+            hx-on="htmx:beforeRequest: this.setAttribute('data-loading', 'true')
                 htmx:afterRequest: this.removeAttribute('data-loading')"
-        class="fieldset w-xs bg-base-200 border border-base-300 p-4 rounded-box group"
+        class="flex flex-col gap-4 group"
     >
-
-        <legend class="fieldset-legend">Form</legend>
-
         // API Endpoint
         <label class="fieldset-label">Endpoint</label>
         <label class="input validator">
@@ -63,7 +64,7 @@ templ RequestForm() {
         // Submit Button
         <button 
             type="submit"
-            class="btn btn-neutral mt-4"
+            class="btn btn-neutral"
         >
             <span class="animate-spin flex size-6 group-data-[loading=true]:flex hidden" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg>
@@ -71,4 +72,5 @@ templ RequestForm() {
             Generate
         </button>
     </form>
+    </fieldset>
 }

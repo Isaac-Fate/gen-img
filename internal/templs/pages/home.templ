@@ -6,26 +6,27 @@ import "gen-img/internal/templs/components"
 
 templ Home() {
     @layouts.BaseLayout("Generate Images") {
-
-        <header class="flex flex-col justify-center h-[4rem] p-8">
+        <main class="flex flex-col h-full gap-8 p-8">
             // Title 
-            <p class="font-bold text-2xl">🦫 gen-img</p>
+            <header class="flex flex-col justify-center text-2xl font-bold">
+                gen-img
+            </header>
 
-        </header>
+            <div class="flex flex-row h-full justify-between gap-8">
+                
+                <div class="flex flex-row gap-2">
+                    // Request Form
+                    @components.RequestForm()
 
-        <div class="flex flex-row h-[calc(100vh-4rem)] justify-between px-8 gap-8">
-            
-            <div class="flex flex-row gap-2">
-                @components.RequestForm()
-
-                // Divider
-                <div class="divider divider-horizontal">👉</div>
+                    // Divider
+                    <div class="divider divider-horizontal">👉</div>
+                </div>
+                
+                // Image List Container
+                <div id="image-list-container" class="overflow-y-auto h-full">
+                </div>
             </div>
-            
-
-            <div id="image-list-container" class="overflow-y-auto h-full">
-            </div>
-        </div>
+        </main>
     }
    
 }

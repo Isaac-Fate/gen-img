@@ -48,3 +48,6 @@ debug
 
 # Ignore coverage files
 /coverage
+
+# Temporary files
+/tmp
