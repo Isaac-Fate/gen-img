@@ -1,0 +1,31 @@
+package layouts
+
+templ BaseLayout(title string) {
+    <!DOCTYPE html>
+    <html lang="en" data-theme="dark">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <title>{ title }</title>
+
+            // HTMX
+            <script src="https://unpkg.com/htmx.org"></script>
+
+            // Tailwind CSS v4
+            <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+            // Daisy UI
+            <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+            
+            // Daisy UI Themes
+            <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+        </head>
+
+        <body class="h-screen overflow-clip">
+            { children... }
+        </body>
+
+        
+    </html>
+}
