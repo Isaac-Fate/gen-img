@@ -5,7 +5,7 @@ import "gen-img/internal/templs/components"
 
 
 templ Home() {
-    @layouts.BaseLayout("Generate Images") {
+    @layouts.BaseLayout("gen-img") {
         <main class="flex flex-col h-full gap-8 p-8">
             // Title 
             <header class="flex flex-col justify-center text-2xl font-bold">
@@ -23,10 +23,10 @@ templ Home() {
                 </div>
                 
                 // Image List Container
+                // Its child will be replaced by a image list after the request is finished
                 <div id="image-list-container" class="overflow-y-auto h-full">
                 </div>
             </div>
         </main>
     }
-   
 }
